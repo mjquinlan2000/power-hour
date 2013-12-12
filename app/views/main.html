@@ -1,8 +1,8 @@
 <div class="jumbotron" style="background-color:{{backgroundColor}}; width:900px">
   <div ng-hide="isRunning">
-    <span>Input seconds: </span>
-    <input ng-model="seconds" ng-change="displayTime()" type="number"/>
+    <span>Input Minutes: </span>
+    <number-input-box ng-model="minutes" ng-change="calculateSeconds()"></number-input-box>
   </div>
   <h1>Time Remaining:</h1>
-  <p><a class="btn btn-lg" ng-class="isRunning && 'btn-success' || 'btn-danger'" style="font-size:200px" ng-click="toggleRunning()">{{currentTime}}</a></p>
+  <p><a class="btn btn-lg" ng-class="isRunning && 'btn-success' || 'btn-danger'" style="font-size:200px;color:{{numberColor}}" ng-click="toggleRunning()">{{currentTime}}</a></p>
 </div>

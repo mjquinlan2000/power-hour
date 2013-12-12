@@ -9,6 +9,11 @@ angular.module('powerApp')
       return ('0'+number).slice(-2);
     }
 
+    $scope.calculateSeconds = function(){
+      $scope.seconds = $scope.minutes * 60;
+      $scope.displayTime();
+    }
+
     $scope.displayTime = function(){
       var sec = parseInt($scope.seconds);
 
@@ -29,17 +34,18 @@ angular.module('powerApp')
     };
 
     $scope.crazyBackground = function(){
-      if(parseInt($scope.seconds) % 60 < 4){
+      if(parseInt($scope.seconds) % 60 < 4 && $scope.isRunning){
         $scope.backgroundColor = $scope.getRandomColor();
+        $scope.numberColor = $scope.getRandomColor();
         $timeout($scope.crazyBackground, 100);
       }else{
+        $scope.numberColor = '';
         $scope.backgroundColor = '';
       }
     };
 
     $scope.run = function(){
       if($scope.isRunning && $scope.seconds > 0){
-        console.log(parseInt($scope.seconds % 60) === 3);
         $scope.seconds--;
         if(parseInt($scope.seconds % 60) === 3){
           $scope.crazyBackground();
@@ -47,9 +53,12 @@ angular.module('powerApp')
         }else{
           $scope.displayTime();
         }
-        $timeout($scope.run, 1000);
+        $scope.timeoutPromise = $timeout($scope.run, 1000);
+      }else{
+        $timeout.cancel($scope.timeoutPromise);
       }
     };
     $scope.seconds = 3600;
+    $scope.minutes = 60;
     $scope.displayTime();
   });
