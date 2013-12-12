@@ -5,11 +5,11 @@ angular.module('powerApp', [
 ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/lets/get/fucked/up', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/lets/get/fucked/up'
       });
   });

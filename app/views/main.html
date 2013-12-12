@@ -5,4 +5,5 @@
   </div>
   <h1>Time Remaining:</h1>
   <p><a class="btn btn-lg" ng-class="isRunning && 'btn-success' || 'btn-danger'" style="font-size:200px;color:{{numberColor}}" ng-click="toggleRunning()">{{currentTime}}</a></p>
+  <p ng-hide="isRunning">(Click time to start/stop)</p>
 </div>
