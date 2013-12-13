@@ -1,12 +1,13 @@
-<div class="jumbotron" style="background-color:{{backgroundColor}}; width:900px">
+<div class="jumbotron" style="background-color:{{backgroundColor}}">
   <div ng-hide="isRunning">
     <span>Input Minutes: </span>
     <number-input-box ng-model="minutes" ng-change="calculateSeconds()"></number-input-box>
   </div>
   <h1>Time Remaining:</h1>
-  <p><a class="btn btn-lg" ng-class="isRunning && 'btn-success' || 'btn-danger'" style="font-size:200px;color:{{numberColor}}" ng-click="toggleRunning()">{{currentTime}}</a></p>
+  <p><a class="btn btn-lg" ng-class="isRunning && 'btn-success' || 'btn-danger'" style="color:{{numberColor}}" ng-click="toggleRunning()">{{currentTime}}</a></p>
   <p ng-hide="isRunning">(Click time to start/stop)</p>
 </div>
 <div>
-  <i>Authored by: Michael Quinlan <a href="mailto:mjquinlan2000@gmail.com">mjquinlan2000@gmail.com</a></i>
+  <i style="float:right">Authored by: Michael Quinlan <a href="mailto:mjquinlan2000@gmail.com">mjquinlan2000@gmail.com</a></i>
+  <i>Built with: <a href="http://angularjs.org">AngularJS</a>, <a href="http://getbootstrap.com">Twitter Bootstrap</a>, and a fondness of wreckless drinking games</i>
 </div>
