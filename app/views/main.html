@@ -1,11 +1,11 @@
 <div class="jumbotron" style="background-color:{{backgroundColor}}">
-  <div ng-hide="isRunning">
+  <div class="move-animation" ng-hide="isRunning">
     <span>Input Minutes: </span>
     <number-input-box ng-model="minutes" ng-change="calculateSeconds()"></number-input-box>
   </div>
   <h1>Time Remaining:</h1>
   <p><a class="btn btn-lg" ng-class="isRunning && 'btn-success' || 'btn-danger'" style="color:{{numberColor}}" ng-click="toggleRunning()">{{currentTime}}</a></p>
-  <p ng-hide="isRunning">(Click time to start/stop)</p>
+  <p class='move-animation' ng-hide="isRunning">(Click time to start/stop)</p>
 </div>
 <div style="float:right">
   <i>Authored by: Michael Quinlan <a href="mailto:mjquinlan2000@gmail.com">mjquinlan2000@gmail.com</a></i>
