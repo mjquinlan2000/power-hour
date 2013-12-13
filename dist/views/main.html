@@ -1,17 +1,19 @@
 <div class="jumbotron" style="background-color:{{backgroundColor}}">
   <div class="move-animation" ng-hide="isRunning">
-    <span>Input Minutes: </span>
+    <span>Input Minutes:</span>
     <number-input-box ng-model="minutes" ng-change="calculateSeconds()"></number-input-box>
   </div>
   <h1>Time Remaining:</h1>
-  <p><a class="btn btn-lg" ng-class="isRunning && 'btn-success' || 'btn-danger'" style="color:{{numberColor}}" ng-click="toggleRunning()">{{currentTime}}</a></p>
+  <p><a class="btn btn-lg" ng-class="isRunning && 'btn-success' || 'btn-danger'" style="color:{{numberColor}}" ng-click="toggleRunning()">{{currentTime}}</a>
+  </p>
   <p class="move-animation" ng-hide="isRunning">(Click time to start/stop)</p>
 </div>
 <div style="float:right">
   <i>Authored by: Michael Quinlan <a href="mailto:mjquinlan2000@gmail.com">mjquinlan2000@gmail.com</a></i>
 </div>
 <div style="float:left">
-  <img class="icon-img" ng-src="images/4e56d300.html5.png">
-  <img class="icon-img" ng-src="images/2e9534c5.css3.png">
+  <a href="http://www.w3.org/html/logo/">
+    <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+  </a>
   <img class="icon-img" ng-src="images/e4e35653.angularjs.png">
 </div>
