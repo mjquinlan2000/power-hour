@@ -7,7 +7,9 @@
   <p><a class="btn btn-lg" ng-class="isRunning && 'btn-success' || 'btn-danger'" style="color:{{numberColor}}" ng-click="toggleRunning()">{{currentTime}}</a></p>
   <p ng-hide="isRunning">(Click time to start/stop)</p>
 </div>
-<div>
-  <i style="float:right">Authored by: Michael Quinlan <a href="mailto:mjquinlan2000@gmail.com">mjquinlan2000@gmail.com</a></i>
-  <i>Built with: <a href="http://angularjs.org">AngularJS</a>, <a href="http://getbootstrap.com">Twitter Bootstrap</a>, and a fondness of reckless drinking games</i>
+<div style="float:right">
+  <i>Authored by: Michael Quinlan <a href="mailto:mjquinlan2000@gmail.com">mjquinlan2000@gmail.com</a></i>
+</div>
+<div style="float:left">
+  <img class="icon-img" ng-repeat="image in ['html5.png', 'css3.png', 'angularjs.png']" ng-src="images/{{image}}">
 </div>
